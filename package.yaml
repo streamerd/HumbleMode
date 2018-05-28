@@ -1,0 +1,48 @@
+name:                HumbleMode
+version:             0.1.0.0
+github:              "streamerd/HumbleMode"
+license:             BSD3
+author:              "Abbas Tolgay Yılmaz"
+maintainer:          "abbastolgayyilmaz@gmail.com"
+copyright:           "MIT"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Arts and Culture
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/streamerd/HumbleMode#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  HumbleMode-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - HumbleMode
+
+tests:
+  HumbleMode-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - HumbleMode

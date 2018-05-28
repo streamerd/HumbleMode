@@ -1,0 +1,61 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0e0645a40f9ba45a5af17a73d34ebd71385a23586de4a36aa323ff64468a7145
+
+name:           HumbleMode
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/streamerd/HumbleMode#readme>
+homepage:       https://github.com/streamerd/HumbleMode#readme
+bug-reports:    https://github.com/streamerd/HumbleMode/issues
+author:         Abbas Tolgay Yılmaz
+maintainer:     abbastolgayyilmaz@gmail.com
+copyright:      MIT
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/streamerd/HumbleMode
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_HumbleMode
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable HumbleMode-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HumbleMode
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HumbleMode
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite HumbleMode-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HumbleMode
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HumbleMode
+    , base >=4.7 && <5
+  default-language: Haskell2010
